@@ -40,7 +40,11 @@ const VueDataScooper = {
             }
           }
           else if (el.tagName === "SELECT" && el.multiple) {
-            // Not yet implemented.
+            let values = []
+            for (let j = 0; j < el.selectedOptions.length; j++) {
+              values.push(el.selectedOptions[j].value)
+            }
+            set(obj, path, values)
           }
           else {
             set(obj, path, el.value)
