@@ -1,0 +1,9 @@
+{
+  "name": "vue-data-scooper",
+  "version": "0.1.0",
+  "description": "A Vue.js plugin",
+  "main": "dist/vue-data-scooper.js",
+  "repository": "https://github.com/kuroda/vue-data-scooper",
+  "author": "Tsutomu Kuroda",
+  "license": "MIT"
+}
