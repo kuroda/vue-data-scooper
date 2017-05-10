@@ -67,6 +67,14 @@ This plugin collects data using browser's DOM manipulation methods, such as
 npm install vue-data-scooper
 ```
 
+## See Also
+
+* [vue-form-for](https://github.com/kuroda/vue-form-for)
+
 ## License
 
 vue-data-scooper is released under [the MIT License](LICENSE).
+
+## Author
+
+[Tsutomu Kuroda](https://github.com/kuroda)
