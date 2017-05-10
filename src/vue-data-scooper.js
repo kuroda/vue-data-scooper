@@ -7,9 +7,8 @@ const VueDataScooper = {
     Vue.mixin({
       data: function() {
         const obj = {}
-
-        const inputs = document.querySelector(this.$options.el)
-          .querySelectorAll("[v-model]")
+        const root = document.querySelector(this.$options.el)
+        const inputs = root.querySelectorAll("[v-model]")
 
         for (let i = 0; i < inputs.length; i++) {
           let el = inputs[i]
@@ -25,21 +24,19 @@ const VueDataScooper = {
             }
           }
           else if (el.tagName === "INPUT" && type === "checkbox") {
-            if (el.checked) {
-              let value = get(obj, path)
-              if (value === undefined) {
-                set(obj, path, el.value)
-              }
-              else if (Array.isArray(value)) {
-                value.push(el.value)
-                set(obj, path, el.value)
-              }
-              else {
-                set(obj, path, [ el.value ])
+            let checkboxesWithSameName = root.querySelectorAll(
+              `input[type='checkbox'][v-model='${path}']`)
+            if (checkboxesWithSameName.length > 1) {
+              if (!has(obj, path)) set(obj, path, [])
+
+              if (el.checked) {
+                let values = get(obj, path)
+                values.push(el.value)
+                set(obj, path, values)
               }
             }
-            else if (!has(obj, path)) {
-              set(obj, path, undefined)
+            else {
+              set(obj, path, el.checked)
             }
           }
           else if (el.tagName === "SELECT" && el.multiple) {
