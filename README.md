@@ -6,14 +6,13 @@ As the official Vue.js document says:
 
 > `v-model` will ignore the initial `value`, `checked` or `selected` attributes
 > found on any form elements.
+> (https://vuejs.org/v2/guide/forms.html)
 
-With this plugin, you can initialize the Vue instance data from form elements.
+However, you can initialize the Vue instance data from form elements with this plugin.
 
 ## Usage
 
-```bash
-npm install vue-data-scooper
-```
+Suppose that we have the following `<form>` element within a HTML document:
 
 ```html
 <form id="customer-form">
@@ -23,6 +22,8 @@ npm install vue-data-scooper
   <textarea v-model="customer.remarks" name="customer[remarks]">Good</textarea>
 </form>
 ```
+
+Then, we can mount a Vue instance on it.
 
 ```javascript
 import Vue from 'vue/dist/vue.esm'
@@ -54,6 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 })
+```
+
+Note that the `<form>` element must be an actual HTML element, not a template.
+This plugin collects data using browser's DOM manipulation methods, such as
+[DocumentFragment.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelectorAll) and [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute).
+
+## Installation
+
+```bash
+npm install vue-data-scooper
 ```
 
 ## License
