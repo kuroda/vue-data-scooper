@@ -1,9 +1,14 @@
 {
   "name": "vue-data-scooper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Vue.js plugin",
-  "main": "dist/vue-data-scooper.js",
+  "main": "src/vue-data-scooper.js",
   "repository": "https://github.com/kuroda/vue-data-scooper",
   "author": "Tsutomu Kuroda",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash.get": "^4.4.2",
+    "lodash.has": "^4.5.2",
+    "lodash.set": "^4.3.2"
+  }
 }
