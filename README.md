@@ -1,5 +1,7 @@
 # vue-data-scooper - A Vue.js plugin
 
+[![npm version](https://badge.fury.io/js/vue-data-scooper.svg)](https://badge.fury.io/js/vue-data-scooper)
+
 ## Synopsis
 
 As the official Vue.js document says:
