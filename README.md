@@ -21,6 +21,14 @@ Suppose that we have the following `<form>` element within a HTML document:
   <input type="text" v-model="customer.name" name="customer[name]" value="john">
   <input type="radio" v-model="customer.plan" name="customer[plan]" value="A" checked>
   <input type="radio" v-model="customer.plan" name="customer[plan]" value="B">
+  <input type="hidden" name="customer[approved]" value="0">
+  <input type="checkbox" v-model="customer.approved" name="customer[approved]"
+    value="1" checked>
+  <select v-model="customer.gender" name="customer[gender]">
+    <option value="" selected>Unspecified</option>
+    <option value="female">Female</option>
+    <option value="male">Male</option>
+  </select>
   <textarea v-model="customer.remarks" name="customer[remarks]">Good</textarea>
 </form>
 ```
@@ -52,6 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
       customer: {
         name: "john",
         plan: "A",
+        approved: true,
+        gender: "",
         remarks: "Good"
       }
     }
@@ -59,15 +69,20 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 ```
 
-Note that the `<form>` element must be an actual HTML element, not a template.
-This plugin collects data using browser's DOM manipulation methods, such as
-[DocumentFragment.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelectorAll) and [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute).
+Note that the `<form>` element must be an actual HTML element, not a Vue template.
+You cannot use this plugin for the string specified as the `template` option
+of a Vue component. See "How this plugin works" section below.
 
 ## Installation
 
 ```bash
 npm install vue-data-scooper
 ```
+
+## How this plugin works
+
+This plugin collects data using browser's DOM manipulation methods, such as
+[DocumentFragment.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelectorAll) and [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute).
 
 ## See Also
 
