@@ -86,7 +86,7 @@ This plugin collects data using browser's DOM manipulation methods, such as
 
 ## See Also
 
-* [vue-form-for](https://github.com/kuroda/vue-form-for)
+* [vue-rails-form-builder](https://github.com/kuroda/vue-rails-form-builder)
 
 ## License
 
