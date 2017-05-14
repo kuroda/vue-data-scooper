@@ -1,4 +1,4 @@
-# vue-data-scooper - A Vue.js plugin
+# vue-data-scooper - A Vue.js plugin for data initialization
 
 [![npm version](https://badge.fury.io/js/vue-data-scooper.svg)](https://badge.fury.io/js/vue-data-scooper)
 
