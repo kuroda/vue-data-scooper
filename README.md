@@ -134,6 +134,28 @@ Note that this plugin collects data using browser's DOM manipulation methods, su
 [DocumentFragment.querySelectorAll()](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelectorAll) and [Element.getAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute).
 For that reason, the `<form>` element must be an actual HTML element, not a Vue template.
 
+## `getInitialData` function
+
+This package exports the `getInitialData` function to extract initial data
+from the DOM tree.
+
+Here is an example of its usage:
+
+```javascript
+import { getInitialData } from "vue-data-scooper"
+
+let template = `
+  <form>
+    <input type='text' v-model='user.name' value='Alice'>
+    <input type='checkbox' v-model='user.approved' checked>
+  </form>
+`
+
+let parser = new DOMParser(template)
+let doc = parser.parseFromString(template, "text/html")
+getInitialData(doc) // => { user: { name: 'Alice', approved: true } }
+```
+
 ## See Also
 
 * [vue-rails-form-builder](https://github.com/kuroda/vue-rails-form-builder)
