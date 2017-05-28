@@ -1,5 +1,9 @@
 # CHANGELOG - vue-data-scooper
 
+## 0.5.0 (2017-05-28)
+
+* Allow remote templates to set initial data via `data-*` attributes.
+
 ## 0.4.0 (2017-05-27)
 
 * Export `getInitialData` function.
