@@ -43,9 +43,15 @@ function scoop(doc, el, obj) {
 }
 
 export const getInitialData = function(doc) {
+  const obj = {}
   const inputs = doc.querySelectorAll("[v-model]")
 
-  const obj = {}
+  if (doc.dataset) {
+    for (let key in doc.dataset) {
+      obj[key] = JSON.parse(doc.dataset[key])
+    }
+  }
+
   for (let i = 0; i < inputs.length; i++) {
     scoop(doc, inputs[i], obj)
   }

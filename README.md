@@ -156,6 +156,27 @@ let doc = parser.parseFromString(template, "text/html")
 getInitialData(doc) // => { user: { name: 'Alice', approved: true } }
 ```
 
+You can also give an initial value to the arbitrary data fields
+via `data-*` attribute of the root element:
+
+```javascript
+import { getInitialData } from "vue-data-scooper"
+
+let template = `
+  <div data-count='0' data-obj='{ "foo": "bar" }'>
+    <span @click="count = count + 1">Increment</span>
+    <span>Count = {{count}}</span>
+  </div>
+`
+
+let parser = new DOMParser(template)
+let doc = parser.parseFromString(template, "text/html")
+getInitialData(doc) // => { count: 0, obj: { foo: "bar" } }
+```
+
+Note that the given values must be valid JSON strings.
+You cannot use loose notation without quotes such as `{ foo: "bar" }`.
+
 ## See Also
 
 * [vue-rails-form-builder](https://github.com/kuroda/vue-rails-form-builder)
