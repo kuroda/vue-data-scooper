@@ -1,5 +1,10 @@
 # CHANGELOG - vue-data-scooper
 
+## 0.6.0 (2017-05-29)
+
+* Remove the functionality to initialize data from dataset
+  (`data-*` attributes) of the remote template's root element.
+
 ## 0.5.1 (2017-05-28)
 
 * Allow `vm.$options.el` to be an instance of `Element`.
