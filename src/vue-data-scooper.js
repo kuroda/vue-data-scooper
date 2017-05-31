@@ -57,7 +57,7 @@ const VueDataScooper = {
   install: function(Vue, options) {
     Vue.mixin({
       data: function() {
-        element = this.$options.el
+        const element = this.$options.el
         const root = element instanceof Element ? element : document.querySelector(element)
         return getInitialData(root)
       }
