@@ -1,11 +1,12 @@
 {
   "name": "vue-data-scooper",
-  "version": "0.6.0",
-  "description": "A Vue.js plugin",
+  "version": "0.6.1",
+  "description": "A Vue.js plugin for data initialization",
   "main": "src/vue-data-scooper.js",
   "repository": "https://github.com/kuroda/vue-data-scooper",
   "author": "Tsutomu Kuroda",
   "license": "MIT",
+  "keywords": [ "vuejs", "plugin", "ajax" ],
   "scripts": {
     "test": "karma start --single-run"
   },

@@ -1,5 +1,9 @@
 # CHANGELOG - vue-data-scooper
 
+## 0.6.1 (2017-05-31)
+
+* Add a missing `const` (bug fix).
+
 ## 0.6.0 (2017-05-29)
 
 * Remove the functionality to initialize data from dataset
