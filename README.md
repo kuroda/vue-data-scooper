@@ -156,6 +156,23 @@ let doc = parser.parseFromString(template, "text/html")
 getInitialData(doc) // => { user: { name: 'Alice', approved: true } }
 ```
 
+## Development Setup
+
+```bash
+# install dependencies
+yarn install
+
+# test
+yarn test
+```
+
+You need the Google Chrome version 59 or higher to run test.
+If you use `google-chrome-beta`, export `CHROME_BIN` environment variable:
+
+```bash
+export CHROME_BIN=$(which google-chrome-beta)
+```
+
 ## See Also
 
 * [vue-remote-template](https://github.com/kuroda/vue-remote-template)
