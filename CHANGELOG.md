@@ -1,5 +1,9 @@
 # CHANGELOG - vue-data-scooper
 
+## 0.6.2 (2017-06-09)
+
+* Allow root element have subcomponents. (Bug fix)
+
 ## 0.6.1 (2017-05-31)
 
 * Add a missing `const` (bug fix).

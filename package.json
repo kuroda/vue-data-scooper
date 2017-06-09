@@ -1,6 +1,6 @@
 {
   "name": "vue-data-scooper",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A Vue.js plugin for data initialization",
   "main": "src/vue-data-scooper.js",
   "repository": "https://github.com/kuroda/vue-data-scooper",
