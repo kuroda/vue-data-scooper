@@ -1,6 +1,7 @@
 import Vue from 'vue/dist/vue.esm'
 import VueDataScooper from '../../src/vue-data-scooper'
 import { expect } from 'chai'
+import Datepicker from 'vuejs-datepicker'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false
@@ -56,7 +57,41 @@ describe('VueDataScooper', () => {
         gender: "",
         remarks: "Good"
       })
-      done();
-    }, 1);
+      done()
+    }, 1)
+  })
+
+  it('should accept a subcomponent', (done) => {
+    const element = document.getElementById("app")
+
+    element.innerHTML = `
+      <form id="customer-form">
+        <input type="text" v-model="customer.name" name="customer[name]"
+          value="john">
+        <datepicker :value="customer.birthday"></datepicker>
+      </form>
+    `
+
+    vm = new Vue({
+      el: "#app",
+      data: function() {
+        return {
+          customer: {
+            birthday: new Date(1970, 1, 1)
+          }
+        }
+      },
+      components: {
+        Datepicker
+      }
+    })
+
+    setTimeout(() => {
+      expect(vm.$data.customer).to.deep.equal({
+        name: "john",
+        birthday: new Date(1970, 1, 1)
+      })
+      done()
+    }, 1)
   })
 })

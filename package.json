@@ -6,7 +6,11 @@
   "repository": "https://github.com/kuroda/vue-data-scooper",
   "author": "Tsutomu Kuroda",
   "license": "MIT",
-  "keywords": [ "vuejs", "plugin", "ajax" ],
+  "keywords": [
+    "vuejs",
+    "plugin",
+    "ajax"
+  ],
   "scripts": {
     "test": "karma start --single-run"
   },
@@ -29,6 +33,7 @@
     "karma-webpack": "^2.0.3",
     "mocha": "^3.4.2",
     "vue": "^2.3.3",
+    "vuejs-datepicker": "^0.7.14",
     "webpack": "^2.6.1"
   }
 }

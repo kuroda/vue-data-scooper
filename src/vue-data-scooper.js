@@ -58,6 +58,7 @@ const VueDataScooper = {
     Vue.mixin({
       data: function() {
         const element = this.$options.el
+        if (element === undefined) return {}
         const root = element instanceof Element ? element : document.querySelector(element)
         return getInitialData(root)
       }
