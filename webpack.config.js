@@ -3,7 +3,7 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     filename: 'vue-data-scooper.js',
-    library: 'vue-data-scooper',
+    library: 'VueDataScooper',
     libraryTarget: 'umd'
   },
   module: {
