@@ -1,6 +1,6 @@
 # CHANGELOG - vue-data-scooper
 
-## 0.7.0 (2017-06-14)
+## 0.7.1 (2017-06-14)
 
 * Distribute the code compiled by webpack.
 
