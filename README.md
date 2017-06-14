@@ -173,6 +173,12 @@ If you use `google-chrome-beta`, export `CHROME_BIN` environment variable:
 export CHROME_BIN=$(which google-chrome-beta)
 ```
 
+## Building for distribution
+
+```bash
+yarn build
+```
+
 ## See Also
 
 * [vue-remote-template](https://github.com/kuroda/vue-remote-template)

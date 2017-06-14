@@ -1,5 +1,9 @@
 # CHANGELOG - vue-data-scooper
 
+## 0.7.0 (2017-06-14)
+
+* Distribute the code compiled by webpack.
+
 ## 0.6.2 (2017-06-09)
 
 * Allow root element have subcomponents. (Bug fix)
