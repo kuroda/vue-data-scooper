@@ -1,6 +1,11 @@
 module.exports = {
   entry: './src/vue-data-scooper.js',
-  output: { filename: 'dist/vue-data-scooper.js' },
+  output: {
+    path: __dirname + '/dist',
+    filename: 'vue-data-scooper.js',
+    library: 'vue-data-scooper',
+    libraryTarget: 'umd'
+  },
   module: {
     loaders: [{
       test: /\.js$/,

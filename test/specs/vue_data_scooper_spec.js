@@ -1,5 +1,5 @@
 import Vue from 'vue/dist/vue.esm'
-import VueDataScooper from '../../src/vue-data-scooper'
+import VueDataScooper from '../../dist/vue-data-scooper'
 import { expect } from 'chai'
 import Datepicker from 'vuejs-datepicker'
 

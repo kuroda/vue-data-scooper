@@ -1,4 +1,4 @@
-import { getInitialData } from "../../src/vue-data-scooper"
+import { getInitialData } from "../../dist/vue-data-scooper"
 import { expect } from "chai"
 
 describe("getInitialData", () => {
