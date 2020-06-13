@@ -1,5 +1,9 @@
 # CHANGELOG - vue-data-scooper
 
+## 0.7.2 (2020-06-13)
+
+* Upgrade depenedent packages.
+
 ## 0.7.1 (2017-06-14)
 
 * Distribute the code compiled by webpack.
